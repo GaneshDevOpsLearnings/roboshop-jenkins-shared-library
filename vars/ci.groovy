@@ -24,6 +24,6 @@ def call(){
                         echo 'CODE UPLOad'
                 }
             }
+        }
     }
-}
 }
