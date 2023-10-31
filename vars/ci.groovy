@@ -17,12 +17,12 @@ def call(){
             stage('Quality analysis'){
                 steps{
 
-             }
+                }
             }
             stage('Uploading the code to centrialized place'){
                 steps{
 
-             }
+                }
             }
     }
 }
