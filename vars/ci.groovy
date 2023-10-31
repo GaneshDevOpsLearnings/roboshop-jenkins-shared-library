@@ -1,29 +1,29 @@
 def call(){
     pipeline{
-    agent{
-        label 'workstation'
-    }
-    stages{
-        stage('complile'){
-            steps{
-
-            }
+        agent{
+         label 'workstation'
         }
-        stage('unit test'){
-            steps{
+        stages{
+            stage('complile'){
+                steps{
 
+                }
             }
-        }
-        stage('Quality analysis'){
-            steps{
+            stage('unit test'){
+                steps{
 
+                }
             }
-        }
-        stage('Uploading the code to centrialized place'){
-            steps{
+            stage('Quality analysis'){
+                steps{
 
+             }
             }
-        }
+            stage('Uploading the code to centrialized place'){
+                steps{
+
+             }
+            }
     }
 }
 }
