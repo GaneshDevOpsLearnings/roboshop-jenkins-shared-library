@@ -1,31 +1,38 @@
-def call(){
-    pipeline{
-        agent{
-         label 'workstation'
-        }
-        stages{
-            stage('complile'){
-                steps{
+try{
+    def call(){
+        pipeline{
+            agent{
+            label 'workstation'
+            }
+            stages{
+                stage('complile'){
+                    steps{
                         script{
-                            common.compile()
+                        common.compile()
                         }
+                    }
                 }
-            }
-            stage('unit test'){
-                steps{
-                        echo 'testingphase'
+                stage('unit test'){
+                    steps{
+                        script{
+                        common.test()
+                        }
+                    }
                 }
-            }
-            stage('Quality analysis'){
-                steps{
-                        echo 'quality'
+                stage('Quality analysis'){
+                    steps{
+                        
+                    }
                 }
-            }
-            stage('Uploading the code to centrialized place'){
-                steps{
-                        echo 'CODE UPLOad'
+                stage('Uploading the code to centrialized place'){
+                    steps{
+                         echo 'CODE UPLOad'
+                    }
                 }
             }
         }
     }
+}
+cache(Exception e){
+    println("Exception: ${e}")
 }

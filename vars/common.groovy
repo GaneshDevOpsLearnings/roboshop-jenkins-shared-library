@@ -9,3 +9,18 @@ def complile(){
         sh 'go mod init dispatch ; go get ; go build'
     }
 }
+
+def test(){
+    if(applang=="nodejs"){
+        sh 'npm run test'
+    }
+    if(applang=="maven"){
+        sh 'mvn test'
+    }
+    if(applang=="python"){
+        sh 'python -m test'
+    }
+    if(applang=="go"){
+        sh 'go test'
+    }
+}
