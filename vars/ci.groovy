@@ -1,5 +1,5 @@
-try{
-    def call(){
+def call(){
+    try{
         pipeline{
             agent{
             label 'workstation'
@@ -32,7 +32,7 @@ try{
             }
         }
     }
-}
-cache(Exception e){
-    println("Exception: ${e}")
+    cache(Exception e){
+        println("Exception: ${e}")
+    }
 }
