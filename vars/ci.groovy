@@ -31,7 +31,7 @@ def call(){
                 }
             }
         }
-    }cache(exception e){
+    }catch(exception e){
         println (failure in ${e})
     }
 }
