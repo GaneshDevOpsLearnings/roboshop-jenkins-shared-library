@@ -18,7 +18,7 @@ def test(){
         sh 'mvn test'
     }
     if(applang=="python"){
-        sh 'python -m test'
+        sh 'python -m unittest'
     }
     if(applang=="go"){
         sh 'go test'

@@ -21,7 +21,7 @@ try{
                 }
                 stage('Quality analysis'){
                     steps{
-                        
+                        sh "sonar-scanner -Dsonar.host.url=http://xxx:9000 -Dsonar.projectKey=${applang} -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.qualitygate.wait=true"
                     }
                 }
                 stage('Uploading the code to centrialized place'){
