@@ -8,14 +8,14 @@ def call(){
                 stage('complile'){
                     steps{
                         script{
-                        common.compile()
+                            common.compile()
                         }
                     }
                 }
                 stage('unit test'){
                     steps{
                         script{
-                        common.test()
+                            common.test()
                         }
                     }
                 }

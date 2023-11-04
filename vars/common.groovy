@@ -1,4 +1,4 @@
-def complile(){
+def compile(){
     if(applang=="nodejs"){
         sh 'npm install'
     }
