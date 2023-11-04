@@ -21,6 +21,7 @@ def call(){
                 }
                 stage('Quality analysis'){
                     steps{
+                        echo 'sonarqube is on the way'
                         //sh "sonar-scanner -Dsonar.host.url=http://xxx:9000 -Dsonar.projectKey=${applang} -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.qualitygate.wait=true"
                     }
                 }
