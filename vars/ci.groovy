@@ -16,6 +16,7 @@ def call(){
                     steps{
                         script{
                             common.test()
+                            
                         }
                     }
                 }
